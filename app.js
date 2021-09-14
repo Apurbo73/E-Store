@@ -273,7 +273,6 @@ const updatePrice = (id, value) => {
     const convertPrice = parseFloat(value);
     const total = parseFloat(convertedOldPrice + convertPrice).toFixed(2);
     document.getElementById(id).innerText = total;
-    updateTotal();
 };
 
 // set innerText function
@@ -296,6 +295,8 @@ const updateTaxAndCharge = () => {
         setInnerText("delivery-charge", 60);
         setInnerText("total-tax", priceConverted * 0.4);
     }
+    updateTotal();
+
 };
 
 //grandTotal update function
